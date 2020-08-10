@@ -1,0 +1,22 @@
+<h1>Extrato Conciliado</h1>
+
+<p aria-live="polite">Transações encontradas: <strong>{{ extratoConciliado?.length }}</strong></p>
+
+<!-- Extrato Conciliado -->
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="extratoConciliado">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transacao of extratoConciliado">
+      <td>{{ transacao.data }}</td>
+      <td>{{ transacao.description }}</td>
+      <td>{{ transacao.amount }}</td>
+    </tr>
+  </tbody>
+</table>
